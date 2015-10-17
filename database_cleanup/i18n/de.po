@@ -249,27 +249,27 @@ msgstr "Bereinige Module"
 #. module: database_cleanup
 #: model:ir.ui.menu,name:database_cleanup.menu_purge_columns
 msgid "Purge obsolete columns"
-msgstr "Bereinige verwaiste Spalten"
+msgstr "Verwaiste Spalten bereinigen"
 
 #. module: database_cleanup
 #: model:ir.ui.menu,name:database_cleanup.menu_purge_data
 msgid "Purge obsolete data entries"
-msgstr "Bereinige verwaiste Dateneinträge"
+msgstr "Verwaiste Dateneinträge bereinigen"
 
 #. module: database_cleanup
 #: model:ir.ui.menu,name:database_cleanup.menu_purge_models
 msgid "Purge obsolete models"
-msgstr "Bereinige verwaiste Modelle"
+msgstr "Verwaiste Modelle bereinigen"
 
 #. module: database_cleanup
 #: model:ir.ui.menu,name:database_cleanup.menu_purge_modules
 msgid "Purge obsolete modules"
-msgstr "Bereinige verwaiste Module"
+msgstr "Verwaiste Module bereinigen"
 
 #. module: database_cleanup
 #: model:ir.ui.menu,name:database_cleanup.menu_purge_tables
 msgid "Purge obsolete tables"
-msgstr "Bereinige verwaiste Tabellen "
+msgstr "Verwaiste Tabellen bereinigen"
 
 #. module: database_cleanup
 #: code:addons/database_cleanup/model/purge_tables.py:92
