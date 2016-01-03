@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013 ABF OSIELL (<http://osiell.com>).
+#    Author: Guewen Baconnier
+#    Copyright 2012 Camptocamp SA
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,14 @@
 #
 ##############################################################################
 
-{
-    'name': "Audit Log",
-    'version': "8.0.1.1.0",
-    'author': "ABF OSIELL,Odoo Community Association (OCA)",
-    'license': "AGPL-3",
-    'website': "http://www.osiell.com",
-    'category': "Tools",
-    'depends': [
-        'base',
-    ],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/auditlog_view.xml',
-        'views/http_session_view.xml',
-        'views/http_request_view.xml',
-    ],
-    'application': True,
-    'installable': True,
-    'pre_init_hook': 'pre_init_hook',
-}
+{"name": "Web Translate Dialog",
+ "category": "Web",
+ "summary": "Easy-to-use pop-up to translate fields in several languages",
+ "license": "AGPL-3",
+ "author": "Camptocamp,Odoo Community Association (OCA)",
+ "version": "8.0.1.0.0",
+ "depends": ['web'],
+ 'data': ['view/web_translate.xml'],
+ 'qweb': ["static/src/xml/base.xml"],
+ 'installable': True,
+ }
