@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* report_custom_filename
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0 Build 1601004\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-29 17:37+0000\n"
+"PO-Revision-Date: 2016-01-29 18:39+0100\n"
+"Last-Translator: Martin Schmid <m.schmid@equitania.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: de\n"
+"X-Generator: Poedit 1.8.6\n"
+
+#. module: report_custom_filename
+#: field:ir.actions.report.xml,download_filename:0
+msgid "Download filename"
+msgstr "Download-Dateiname"
+
+#. module: report_custom_filename
+#: help:ir.actions.report.xml,download_filename:0
+msgid ""
+"Fill in this field to have a custom file name when downloading this report. This string is evaluated as a jinja2 expression.\n"
+"You can use python expressions, `objects` is a browse record list of the objects for which the report is being generated.\n"
+"Check for this list's length to determine if it is a report being printed for multiple records or not. You also have access to `o`, which is the first record in the list.\n"
+"For qweb reports, the variable `ext` gives you the requested format's extension"
+msgstr ""
+"Füllen Sie dieses Feld, um einen benutzerdefinierten Dateinamen zu haben, wenn dieser Bericht herunterladen wird. Diese Zeichenfolge wird als \"jinja2\" Ausdruck ausgewertet.\n"
+"Sie können Python-Ausdrücke verwenden, 'Objekte' ist eine Suchliste aufnehmen der Objekte, für die der Bericht generiert wird.\n"
+"Überprüfen Sie die Länge dieser Liste nach, ob es einen Bericht für mehrere Datensätze gedruckt wird, oder nicht ist. Sie haben auch Zugriff auf ' o ', das ist der erste Datensatz in der Liste.\n"
+"Für Web Berichte gibt Ihnen die Variable 'ext' das angeforderte Format Erweiterung"
