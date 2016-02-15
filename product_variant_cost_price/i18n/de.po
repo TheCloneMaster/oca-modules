@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_variant_cost_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0 Build 1602003\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-15 12:42+0000\n"
+"PO-Revision-Date: 2016-02-15 13:45+0100\n"
+"Last-Translator: Martin Schmid <m.schmid@equitania.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: de\n"
+"X-Generator: Poedit 1.8.7\n"
+
+#. module: product_variant_cost_price
+#: field:product.price.history.product,create_uid:0
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: product_variant_cost_price
+#: field:product.price.history.product,create_date:0
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: product_variant_cost_price
+#: field:product.price.history.product,datetime:0
+msgid "Historization Time"
+msgstr "Historisierung Zeit"
+
+#. module: product_variant_cost_price
+#: field:product.price.history.product,cost:0
+msgid "Historized Cost"
+msgstr "Historisierten Kosten"
+
+#. module: product_variant_cost_price
+#: field:product.price.history.product,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: product_variant_cost_price
+#: field:product.price.history.product,write_uid:0
+msgid "Last Updated by"
+msgstr "Zuletzt bearbeitet von"
+
+#. module: product_variant_cost_price
+#: field:product.price.history.product,write_date:0
+msgid "Last Updated on"
+msgstr "Zuletzt bearbeitet am"
+
+#. module: product_variant_cost_price
+#: model:ir.model,name:product_variant_cost_price.model_product_product
+#: field:product.price.history.product,product_id:0
+msgid "Product"
+msgstr "Produkt"
+
+#. module: product_variant_cost_price
+#: model:ir.model,name:product_variant_cost_price.model_product_template
+#: field:product.price.history.product,product_template_id:0
+msgid "Product Template"
+msgstr "Produktvorlage"
+
+#. module: product_variant_cost_price
+#: field:product.price.history.product,company_id:0
+msgid "unknown"
+msgstr "unbekannt"
