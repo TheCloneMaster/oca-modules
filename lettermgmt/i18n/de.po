@@ -271,7 +271,7 @@ msgstr "Brief-Zeilen"
 #. module: lettermgmt
 #: model:ir.ui.menu,name:lettermgmt.letter_log_menu
 msgid "Letter Management"
-msgstr "Brief-Management"
+msgstr "Briefe"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_letter_reassignment_tree_view
