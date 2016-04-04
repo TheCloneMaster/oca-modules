@@ -177,7 +177,7 @@ msgstr "Zeitfenster ausfüllen"
 #. module: project_gtd
 #: field:project.gtd.context,sequence:0 field:project.gtd.timebox,sequence:0
 msgid "Sequence"
-msgstr "Sequenz"
+msgstr "Reihenfolge"
 
 #. module: project_gtd
 #: field:project.timebox.fill.plan,timebox_to_id:0
