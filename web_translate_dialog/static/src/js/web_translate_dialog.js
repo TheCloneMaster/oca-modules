@@ -118,12 +118,13 @@ openerp.web_translate_dialog = function (instance) {
                 });
                 $cleditor.refresh();
                 // -- end
-
-                $cleditor.change(function() {
-                    this.updateTextArea();
-                    this.$area.toggleClass('touched',
-                                        (this.$area.val() != this.$area.attr('data-value')));
-                });
+                
+// EQUITANIA: deactivated because of the problems with auto change of syntax
+//                $cleditor.change(function() {
+//                    this.updateTextArea();
+//                    this.$area.toggleClass('touched',
+//                                        (this.$area.val() != this.$area.attr('data-value'))); // EQUITANIA: deactivated because of the problems with auto change of syntax
+//                });
             });
         },
         set_fields_values: function(lang, values) {
