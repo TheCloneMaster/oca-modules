@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Author: Guewen Baconnier
-#    Copyright 2012 Camptocamp SA
+#    OpenERP, Open Source Management Solution
+#
+#    Copyright (c) 2014 Noviat nv/sa (www.noviat.com). All rights reserved.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -11,22 +12,26 @@
 #
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#    along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
-{"name": "Web Translate Dialog",
- "category": "Web",
- "summary": "Easy-to-use pop-up to translate fields in several languages",
- "license": "AGPL-3",
- "author": "Camptocamp,Odoo Community Association (OCA)",
- "version": "8.0.1.0.2",
- "depends": ['web'],
- 'data': ['view/web_translate.xml'],
- 'qweb': ["static/src/xml/base.xml"],
- 'installable': True,
- }
+{
+    'name': 'Show selected sheets with full width',
+    'version': '8.0.0.1.0',
+    'license': 'AGPL-3',
+    'author': 'Noviat, Odoo Community Association (OCA)',
+    'category': 'Hidden',
+    'depends': [
+        'web',
+    ],
+    'data': [
+        'views/sheet.xml',
+    ],
+    'active': False,
+    'installable': True,
+    }
