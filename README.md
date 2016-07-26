@@ -1,6 +1,6 @@
 # README #
 
-**Tools ab Odoo 8**
+**Tools ab Odoo 9**
 
 Dieses Repository bietet Erweiterungen für das Open Source System odoo http://www.odoo.com
 Es enthält Pakete basierend auf dem Open Source System Odoo (früher auch als OpenERP bekannt). 

@@ -1,26 +1,9 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    Copyright (c) 2009 CamptoCamp. All rights reserved.
-#    @author Nicolas Bessi
-#
-#    Abstract class to fetch rates from Bank of Canada
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
-from .currency_getter_interface import Currency_getter_interface
+# © 2009 Camptocamp
+# © 2014 Daniel Dico
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+from .currency_getter_interface import CurrencyGetterInterface
 
 from openerp import _
 from openerp.exceptions import except_orm
@@ -29,19 +12,32 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class CA_BOC_getter(Currency_getter_interface):
+class CA_BOCGetter(CurrencyGetterInterface):
     """Implementation of Curreny_getter_factory interface
     for Bank of Canada RSS service
 
     """
+    # Bank of Canada is using RSS-CB
+    # http://www.cbwiki.net/wiki/index.php/Specification_1.1
+    # This RSS format is used by other national banks
+    #  (Thailand, Malaysia, Mexico...)
+
+    code = 'CA_BOC'
+    name = 'Bank of Canada - noon rates'
+
+    supported_currency_array = [
+        "AED", "ANG", "ARS", "AUD", "BOC", "BRL", "BSD", "CHF", "CLP", "CNY",
+        "COP", "CZK", "DKK", "EUR", "FJD", "GBP", "GHS", "GTQ", "HKD", "HNL",
+        "HRK", "HUF", "IDR", "ILS", "INR", "ISK", "JMD", "JPY", "KRW", "LKR",
+        "MAD", "MMK", "MXN", "MYR", "NOK", "NZD", "PAB", "PEN", "PHP", "PKR",
+        "PLN", "RON", "RSD", "RUB", "SEK", "SGD", "THB", "TND", "TRY", "TTD",
+        "TWD", "USD", "VEF", "VND", "XAF", "XCD", "XPF", "ZAR"]
 
     def get_updated_currency(self, currency_array, main_currency,
                              max_delta_days):
         """implementation of abstract method of Curreny_getter_interface"""
 
         # as of Jan 2014 BOC is publishing noon rates for about 60 currencies
-        # currency codes in the XML file have the suffix "_NOON" or "_CLOSE" as
-        # of April 2015
         url = ('http://www.bankofcanada.ca/stats/assets/'
                'rates_rss/noon/en_%s.xml')
         # closing rates are available as well (please note there are only 12
@@ -80,7 +76,7 @@ class CA_BOC_getter(Currency_getter_interface):
 
             # check for valid exchange data
             if (dom.entries[0].cb_basecurrency == main_currency) and \
-                    (dom.entries[0].cb_targetcurrency[:3] == curr):
+                    (dom.entries[0].cb_targetcurrency == curr):
                 rate = dom.entries[0].cb_exchangerate.split('\n', 1)[0]
                 rate_date_datetime = parser.parse(dom.entries[0].updated)\
                     .astimezone(pytz.utc).replace(tzinfo=None)

@@ -21,7 +21,7 @@
 {
     'name': "Project classification (easy hierarchy and setup "
             "for project managers)",
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.0',
     'category': 'Generic Modules/Projects & Services',
     'author': "Camptocamp,Odoo Community Association (OCA)",
     'website': 'http://www.camptocamp.com',
@@ -36,7 +36,7 @@
         'security/ir.model.access.csv',
     ],
     'test': [],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False
 }
