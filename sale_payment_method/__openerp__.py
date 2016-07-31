@@ -1,9 +1,8 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
-#   sale_automatic_workflow for OpenERP
+#   sale_payment_method for OpenERP
 #   Copyright (C) 2011 Akretion Sébastien BEAU <sebastien.beau@akretion.com>
-#   Copyright 2013 Camptocamp SA (author: Guewen Baconnier)
 #
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU Affero General Public License as
@@ -20,20 +19,19 @@
 #
 ##############################################################################
 
-{
-    'name': 'Sale Automatic Workflow',
-    'version': '8.0.0.3.1',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'author': "Akretion,Camptocamp,Odoo Community Association (OCA)",
-    'website': 'http://www.akretion.com/',
-    'depends': ['sale_stock', 'sales_team',
-                ],
-    'data': ['sale_view.xml',
-             'sale_workflow.xml',
-             'sale_workflow_process_view.xml',
-             'automatic_workflow_data.xml',
-             'security/ir.model.access.csv',
+{'name': 'Sale Payment Method',
+ 'version': '0.2.1',
+ 'category': 'Generic Modules/Others',
+ 'license': 'AGPL-3',
+ 'author': "Akretion,Odoo Community Association (OCA)",
+ 'website': 'http://www.akretion.com/',
+ 'depends': ['sale',
              ],
-    'installable': True,
-}
+ 'data': ['sale_view.xml',
+          'payment_method_view.xml',
+          'security/ir.model.access.csv',
+          'security/rules.xml',
+          ],
+ 'demo': [],
+ 'installable': True,
+ }

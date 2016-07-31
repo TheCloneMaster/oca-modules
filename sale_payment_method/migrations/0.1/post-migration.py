@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#   sale_automatic_workflow for OpenERP
-#   Copyright (C) 2011 Akretion Sébastien BEAU <sebastien.beau@akretion.com>
-#   Copyright 2013 Camptocamp SA (author: Guewen Baconnier)
-#
+#   sale_quick_payment for OpenERP
+#   Copyright (C) 2012-TODAY Akretion <http://www.akretion.com>.
+#     All Rights Reserved
+#     @author Sébastien BEAU <sebastien.beau@akretion.com>
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU Affero General Public License as
 #   published by the Free Software Foundation, either version 3 of the
@@ -20,20 +20,17 @@
 #
 ##############################################################################
 
-{
-    'name': 'Sale Automatic Workflow',
-    'version': '8.0.0.3.1',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'author': "Akretion,Camptocamp,Odoo Community Association (OCA)",
-    'website': 'http://www.akretion.com/',
-    'depends': ['sale_stock', 'sales_team',
-                ],
-    'data': ['sale_view.xml',
-             'sale_workflow.xml',
-             'sale_workflow_process_view.xml',
-             'automatic_workflow_data.xml',
-             'security/ir.model.access.csv',
-             ],
-    'installable': True,
-}
+""" r0.1: Migration 6.1 => 7.0.0.1
+    migrate the field payment_id from one2many to payment_ids many2many
+"""
+__name__ = ("sale.order:: V7 change/rename the field payment_id into a"
+            "many2many with the name payment_ids")
+
+
+def migrate(cr, version):
+    if version:
+        cr.execute("INSERT INTO account_voucher_sale_order_rel"
+                   "(sale_order_id, account_voucher_id) "
+                   "(SELECT id, payment_id FROM "
+                   " sale_order "
+                   "WHERE payment_id IS NOT NULL )")
