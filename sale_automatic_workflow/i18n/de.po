@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * sale_automatic_workflow
-# 
+#
 # Translators:
 # Rudolf Schnapka <rs@techno-flex.de>, 2015
 msgid ""
@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: sale-workflow (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-12 01:52+0000\n"
-"PO-Revision-Date: 2016-03-05 09:54+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"PO-Revision-Date: 2016-07-31 10:53+0200\n"
+"Last-Translator: Martin Schmid <m.schmid@equitania.com>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-sale-workflow-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. module: sale_automatic_workflow
 #: selection:sale.workflow.process,create_invoice_on:0
@@ -25,8 +26,7 @@ msgstr "Nach Auslieferung"
 
 #. module: sale_automatic_workflow
 #: model:ir.actions.act_window,name:sale_automatic_workflow.act_sale_workflow_process_form
-#: model:ir.ui.menu,name:sale_automatic_workflow.menu_act_sale_workflow_process_form
-#: field:sale.order,workflow_process_id:0
+#: model:ir.ui.menu,name:sale_automatic_workflow.menu_act_sale_workflow_process_form field:sale.order,workflow_process_id:0
 #: view:sale.workflow.process:sale_automatic_workflow.sale_workflow_process_view_form
 #: view:sale.workflow.process:sale_automatic_workflow.sale_workflow_process_view_tree
 msgid "Automatic Workflow"
@@ -39,9 +39,7 @@ msgstr "Automatisierungsinformation"
 
 #. module: sale_automatic_workflow
 #: model:sale.workflow.process,warning:sale_automatic_workflow.automatic_validation
-msgid ""
-"Be careful, if you save the order with this setting, it could be auto-"
-"confirmed, even if you are editing it."
+msgid "Be careful, if you save the order with this setting, it could be auto-confirmed, even if you are editing it."
 msgstr "Seien Sie vorsichtig, wenn Sie einen Auftrag mit dieser Einstellung speichern, kann dieser bereits beim Bearbeiten auto-bestätigt werden."
 
 #. module: sale_automatic_workflow
@@ -60,14 +58,12 @@ msgid "Create Invoice"
 msgstr "Rechnung anlegen"
 
 #. module: sale_automatic_workflow
-#: field:automatic.workflow.job,create_uid:0
-#: field:sale.workflow.process,create_uid:0
+#: field:automatic.workflow.job,create_uid:0 field:sale.workflow.process,create_uid:0
 msgid "Created by"
 msgstr "Angelegt durch"
 
 #. module: sale_automatic_workflow
-#: field:automatic.workflow.job,create_date:0
-#: field:sale.workflow.process,create_date:0
+#: field:automatic.workflow.job,create_date:0 field:sale.workflow.process,create_date:0
 msgid "Created on"
 msgstr "Angelegt am"
 
@@ -93,8 +89,7 @@ msgstr "ID"
 
 #. module: sale_automatic_workflow
 #: help:sale.workflow.process,warning:0
-msgid ""
-"If set, display the message when a user selects the process on a sale order"
+msgid "If set, display the message when a user selects the process on a sale order"
 msgstr "Zeige diese Meldung, wenn gesetzt und der Anwender den Prozess im Verkaufsauftrag wählt."
 
 #. module: sale_automatic_workflow
@@ -113,14 +108,12 @@ msgid "Invoice on"
 msgstr "Berechne bei"
 
 #. module: sale_automatic_workflow
-#: field:automatic.workflow.job,write_uid:0
-#: field:sale.workflow.process,write_uid:0
+#: field:automatic.workflow.job,write_uid:0 field:sale.workflow.process,write_uid:0
 msgid "Last Updated by"
 msgstr "Zuletzt akualisiert durch"
 
 #. module: sale_automatic_workflow
-#: field:automatic.workflow.job,write_date:0
-#: field:sale.workflow.process,write_date:0
+#: field:automatic.workflow.job,write_date:0 field:sale.workflow.process,write_date:0
 msgid "Last Updated on"
 msgstr "Zuletzt akualisiert am"
 
@@ -175,8 +168,7 @@ msgid "Sale Orders"
 msgstr "Verkaufsaufträge"
 
 #. module: sale_automatic_workflow
-#: field:account.invoice,workflow_process_id:0
-#: model:ir.model,name:sale_automatic_workflow.model_sale_workflow_process
+#: field:account.invoice,workflow_process_id:0 model:ir.model,name:sale_automatic_workflow.model_sale_workflow_process
 #: field:stock.picking,workflow_process_id:0
 msgid "Sale Workflow Process"
 msgstr "Verkaufs-Workflow"
@@ -219,7 +211,7 @@ msgstr "Lagerbuchung"
 #. module: sale_automatic_workflow
 #: field:sale.workflow.process,validate_invoice:0
 msgid "Validate Invoice"
-msgstr "KommissionierscheiPrüfe Rechnung"
+msgstr "Prüfe Rechnung"
 
 #. module: sale_automatic_workflow
 #: field:sale.workflow.process,validate_order:0
