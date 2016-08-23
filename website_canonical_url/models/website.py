@@ -19,10 +19,13 @@ class website(models.Model):
             lang = self._context['lang']
             if lang == request.website.default_lang_code:
                 canonical_url = req.httprequest.base_url
+                canonical_url = canonical_url.replace("http:", "https:")        # Erweitert am 23.8.2016 von Sody                
             else:
                 url_parts = urlparse(req.httprequest.base_url)
                 url_parts = list(url_parts)
                 # change the path of the url
                 url_parts[2] = lang + url_parts[2]
                 canonical_url = urlunparse(url_parts)
+                canonical_url = canonical_url.replace("http:", "https:")        # Erweitert am 23.8.2016 von Sody                
+                
         return canonical_url
