@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <template id="report_purchaseorder_document" inherit_id="purchase.report_purchaseorder_document">
-            <xpath expr="//th[strong[text()='Net Price']]" position="before">
+    <!-- Anpassung für Modul equitania -->
+        <template id="report_purchaseorder_document" inherit_id="equitania.report_purchaseorder_data">
+            <xpath expr="//th[strong[text()='Net price']]" position="before">
                 <th class="text-right"><strong>Disc. (%)</strong></th>
             </xpath>
-            <xpath expr="//td[span[@t-field='line.price_subtotal']]" position="before">
+            <xpath expr="//td[span[@t-esc='get_standard_price(line.price_subtotal, o.partner_id.lang, o.currency_id)']]" position="before">
                 <td class="text-right">
                     <span t-field="line.discount"/>
                 </td>
