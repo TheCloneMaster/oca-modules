@@ -121,10 +121,15 @@ openerp.web_translate_dialog = function (instance) {
                 
 // EQUITANIA: deactivated because of the problems with auto change of syntax
                 $cleditor.change(function() {
-                    this.updateTextArea(); 			//EQUITANIA: this lines have to be deactivated, if you want to have a preview in the email-templates
-                    this.$area.toggleClass('touched',
-                                        (this.$area.val() != this.$area.attr('data-value'))); // EQUITANIA: deactivated because of the problems with auto change of syntax
-                });
+                    var START_TAG = "% for line in";				// EQUITANIA: Added query. If the string "% for line in" is not in the textarea, the update function will executed
+                    var allText = $textarea.val();					// EQUITANIA: Otherwise the update function will not executed
+                    var startIndex = allText.indexOf(START_TAG);	// EQUITANIA:
+                    if (startIndex == -1) {							// EQUITANIA:
+                		this.updateTextArea(); 						// EQUITANIA: (old state: this lines have to be deactivated, if you want to have a preview in the email-templates)
+                    	this.$area.toggleClass('touched',			// EQUITANIA: (old state: this lines have to be deactivated, if you want to have a preview in the email-templates)
+                                        (this.$area.val() != this.$area.attr('data-value'))); //EQUITANIA: (old state: this lines have to be deactivated, if you want to have a preview in the email-templates)
+                    }												// EQUITANIA:
+                    });
             });
         },
         set_fields_values: function(lang, values) {
