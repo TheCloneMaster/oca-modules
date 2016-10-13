@@ -55,9 +55,11 @@ class sale_order(models.Model):
     def copy_quotation(self):
         self.ensure_one()
         revision_self = self.with_context(new_sale_revision=True)
+        print"self.context: ",self._context
         action = super(sale_order, revision_self).copy_quotation()
         old_revision = self.browse(action['res_id'])
         action['res_id'] = self.id
+        old_revision.write({'active': False})
         self.delete_workflow()
         self.create_workflow()
         self.write({'state': 'draft'})
@@ -70,23 +72,23 @@ class sale_order(models.Model):
     @api.returns('self', lambda value: value.id)
     @api.multi
     def copy(self, defaults=None):
-        if not defaults:
-            defaults = {}
-        if self.env.context.get('new_sale_revision'):
-            prev_name = self.name
-            revno = self.revision_number
-            self.write({'revision_number': revno + 1,
-                        'name': '%s-%02d' % (self.unrevisioned_name,
-                                             revno + 1)
-                        })
-            defaults.update({'name': prev_name,
-                             'revision_number': revno,
-                             'active': False,
-                             'state': 'cancel',
-                             'current_revision_id': self.id,
-                             })
-        return super(sale_order, self).copy(defaults)
-
+         if not defaults:
+             defaults = {}
+         if self.env.context.get('new_sale_revision'):
+             prev_name = self.name
+             revno = self.revision_number
+             self.write({'revision_number': revno + 1,
+                         'name': '%s-%02d' % (self.unrevisioned_name,
+                                              revno + 1)
+                         })
+             defaults.update({'name': prev_name,
+                              'revision_number': revno,
+                              #'active': False,
+                              'state': 'cancel',
+                              'current_revision_id': self.id,
+                              })
+         return super(sale_order, self).copy(defaults)
+ 
     @api.model
     def create(self, values):
         if 'unrevisioned_name' not in values:
@@ -95,3 +97,4 @@ class sale_order(models.Model):
                 values['name'] = seq.next_by_code('sale.order') or '/'
             values['unrevisioned_name'] = values['name']
         return super(sale_order, self).create(values)
+    
