@@ -9,7 +9,17 @@
                     <t t-call="website.submenu"/>
                 </t>
             </xpath>
-
         </template>
+        
+        <template id="website_display_menu_submenu" name="Conditional display menu CHILDMENUS"
+                  inherit_id="website.submenu"
+                  active="True" customize_show="True">
+            <xpath expr="//ul[@class='dropdown-menu']/t/t" position="replace">
+            	<t t-if="(submenu.user_logged and request.uid !=  %(base.public_user)d) or (submenu.user_not_logged and request.uid == %(base.public_user)d)">
+                	<t t-call="website.submenu"/>
+                </t>
+            </xpath>
+        </template>
+         
     </data>
 </openerp>
