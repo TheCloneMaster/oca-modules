@@ -10,8 +10,7 @@
                 </t>
             </xpath>
         </template>
-        
-        <template id="website_display_menu_submenu" name="Conditional display menu CHILDMENUS"
+        <!-- <template id="website_display_menu_submenu" name="Conditional display menu CHILDMENUS"
                   inherit_id="website.submenu"
                   active="True" customize_show="True">
             <xpath expr="//ul[@class='dropdown-menu']/t/t" position="replace">
@@ -19,7 +18,8 @@
                 	<t t-call="website.submenu"/>
                 </t>
             </xpath>
-        </template>
+        </template>-->
+
          
     </data>
 </openerp>
