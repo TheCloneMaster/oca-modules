@@ -22,7 +22,7 @@
 
 {
     'name': 'Website Menu By User Display',
-    'version': '8.0.1.1.2',
+    'version': '8.0.1.1.3',
     'author': 'Savoir-faire Linux,Odoo Community Association (OCA)',
     'website': 'http://www.savoirfairelinux.com',
     'license': 'AGPL-3',
