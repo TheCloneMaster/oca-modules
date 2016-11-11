@@ -55,7 +55,6 @@ class sale_order(models.Model):
     def copy_quotation(self):
         self.ensure_one()
         revision_self = self.with_context(new_sale_revision=True)
-        print"self.context: ",self._context
         action = super(sale_order, revision_self).copy_quotation()
         old_revision = self.browse(action['res_id'])
         action['res_id'] = self.id
@@ -72,6 +71,9 @@ class sale_order(models.Model):
     @api.returns('self', lambda value: value.id)
     @api.multi
     def copy(self, defaults=None):
+         unrevsioned_name = self.name
+         self.write({'unrevisioned_name': unrevsioned_name,})
+         
          if not defaults:
              defaults = {}
          if self.env.context.get('new_sale_revision'):

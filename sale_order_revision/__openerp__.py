@@ -21,7 +21,7 @@
 
 {
     'name': "Sale order revisions",
-    'version': '8.0.0.1.1',
+    'version': '8.0.0.1.2',
     'category': 'Sale Management',
     'author': 'Agile Business Group,'
               'Camptocamp,'
