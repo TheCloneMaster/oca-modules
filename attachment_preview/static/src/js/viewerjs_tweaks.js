@@ -21,20 +21,12 @@
 
 // This file contains tweaks for viewerjs itself and is not meant to be run in
 // OpenERP's context
-var original_loadDocument = loadDocument;
-loadDocument = function(documentUrl)
+var original_Viewer = Viewer;
+Viewer = function(plugin, parameters)
 {
-    original_loadDocument.apply(this, arguments);
-    var original_onload = window.onload;
-    window.onload = function()
+    if(!plugin)
     {
-        original_onload();
-        var matches = (/&title=([^&]+)&/).exec(window.location.hash);
-        if(matches && matches.length > 1)
-        {
-            document.title = decodeURIComponent(matches[1]);
-            document.getElementById('documentName').innerHTML = document.title;
-
-        }
-    };
+        alert('Unsupported file type');
+    }
+    return original_Viewer(plugin, parameters);
 }
