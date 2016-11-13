@@ -4,7 +4,7 @@
 {
     "name": "Project Description",
     "summary": "Add a description to projects",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.0.1",
     "category": "Project Management",
     "website": "http://www.antiun.com",
     "author": "Antiun Ingeniería S.L., Odoo Community Association (OCA)",
