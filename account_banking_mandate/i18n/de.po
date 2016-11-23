@@ -1,0 +1,421 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_banking_mandate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.1 Build 161103\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-22 13:28+0000\n"
+"PO-Revision-Date: 2016-11-22 13:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_banking_mandate
+#: model:ir.actions.act_window,help:account_banking_mandate.mandate_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"        Click to create a new Banking Mandate.\n"
+"        </p><p>\n"
+"        A Banking Mandate is a document signed by your customer that gives you the autorization to do one or several operations on his bank account.\n"
+"        </p>\n"
+"    "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"        Click to create a new Banking Mandate.\n"
+"        </p><p>\n"
+"        Ein Banking Mandate ist ein Dokument,w elches von Ihrem Kunden unterschrieben ist und Ihnen damit die Möglichkeit gibt, diverse Tätigkeiten mit dem Bankkonto Ihres Kunden zu tätigen.\n"
+"        </p>\n"
+"    "
+
+#. module: account_banking_mandate
+#: sql_constraint:account.banking.mandate:0
+msgid "A Mandate with the same reference already exists for this company !"
+msgstr "Es existiert bereits ein Mandate mit dieser Referenz für dieses Unternehmen !"
+
+#. module: account_banking_mandate
+#: model:ir.model,name:account_banking_mandate.model_account_banking_mandate
+msgid "A generic banking mandate"
+msgstr "Ein allgemeines Bank Mandat"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_form
+msgid "Back to Draft"
+msgstr "Zurück zum Entwurf"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,partner_bank_id:0
+msgid "Bank Account"
+msgstr "Bankkonto"
+
+#. module: account_banking_mandate
+#: model:ir.model,name:account_banking_mandate.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Bankkonten"
+
+#. module: account_banking_mandate
+#: model:ir.model,name:account_banking_mandate.model_bank_payment_line
+msgid "Bank Payment Lines"
+msgstr "Bank Zahlungspositionen"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_form
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_tree
+msgid "Banking Mandate"
+msgstr "Bank Mandat"
+
+#. module: account_banking_mandate
+#: model:mail.message.subtype,description:account_banking_mandate.mandate_cancel
+msgid "Banking Mandate Cancelled"
+msgstr "Bank Mandat abgebrochen"
+
+#. module: account_banking_mandate
+#: model:mail.message.subtype,description:account_banking_mandate.mandate_valid
+msgid "Banking Mandate Validated"
+msgstr "Bank Mandat bestätigt"
+
+#. module: account_banking_mandate
+#: model:mail.message.subtype,description:account_banking_mandate.mandate_expired
+msgid "Banking Mandate has Expired"
+msgstr "Bank Mandat ist veraltet"
+
+#. module: account_banking_mandate
+#: model:ir.actions.act_window,name:account_banking_mandate.mandate_action
+msgid "Banking Mandates"
+msgstr "Bank Mandat"
+
+#. module: account_banking_mandate
+#: help:res.partner.bank,mandate_ids:0
+msgid "Banking mandates represents an authorization that the bank account owner gives to a company for a specific operation"
+msgstr "Bank Mandate stehen für eine Authorisierung durch den Eigentümer eines Bankkontos, welche an ein Unternehmen weitergegeben werden um spezielle Tätigkeiten ausüben zu können"
+
+#. module: account_banking_mandate
+#: selection:account.banking.mandate,format:0
+#: code:addons/account_banking_mandate/models/account_banking_mandate.py:39
+#, python-format
+msgid "Basic Mandate"
+msgstr "Basis Mandat"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_form
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_search
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+#. module: account_banking_mandate
+#: code:addons/account_banking_mandate/models/account_banking_mandate.py:104
+#, python-format
+msgid "Cannot validate the mandate '%s' because it is not attached to a bank account."
+msgstr "Das Mandat '%s' kann nicht bestätigt werden, da es keinem Bankkonto zugehörig ist."
+
+#. module: account_banking_mandate
+#: code:addons/account_banking_mandate/models/account_banking_mandate.py:100
+#, python-format
+msgid "Cannot validate the mandate '%s' without a date of signature."
+msgstr "Das Mandat '%s' kann nicht ohne einen Zeitpunkt der Unterschrift bestätigt werden."
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,company_id:0
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,create_uid:0
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,create_date:0
+msgid "Created on"
+msgstr "Erstellt am:"
+
+#. module: account_banking_mandate
+#: view:res.partner:account_banking_mandate.mandate_partner_form
+#: view:res.partner.bank:account_banking_mandate.mandate_partner_bank_tree
+msgid "DD Mandates"
+msgstr "DD Mandate"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,signature_date:0
+msgid "Date of Signature of the Mandate"
+msgstr "Datum Unterschrift des Mandats"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,last_debit_date:0
+msgid "Date of the Last Debit"
+msgstr "Datum der letzten Belastung"
+
+#. module: account_banking_mandate
+#: help:account.banking.mandate,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Datum der letzten Nachricht, welche durch den Eintrag generiert wurde."
+
+#. module: account_banking_mandate
+#: field:account.invoice,mandate_id:0
+#: field:bank.payment.line,mandate_id:0
+#: field:payment.line,mandate_id:0
+msgid "Direct Debit Mandate"
+msgstr "Direct Debit Mandat"
+
+#. module: account_banking_mandate
+#: view:res.partner.bank:account_banking_mandate.mandate_partner_bank_form
+#: field:res.partner.bank,mandate_ids:0
+msgid "Direct Debit Mandates"
+msgstr "Direct Debit Mandate"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,display_name:0
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_search
+msgid "Draft"
+msgstr "Entwurf"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_search
+msgid "Expired"
+msgstr "Veraltet"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,message_follower_ids:0
+msgid "Followers"
+msgstr "Anhänger"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_form
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_tree
+msgid "Format"
+msgstr "Format"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_search
+msgid "Group By"
+msgstr "Gruppieren nach"
+
+#. module: account_banking_mandate
+#: help:account.banking.mandate,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: account_banking_mandate
+#: help:account.banking.mandate,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Wenn geprüft, neue Nachrichten erfordern Ihre Aufmerksamkeit."
+
+#. module: account_banking_mandate
+#: model:ir.model,name:account_banking_mandate.model_account_invoice
+msgid "Invoice"
+msgstr "Rechnung"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Ist ein Follower"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,message_last_post:0
+msgid "Last Message Date"
+msgstr "Datum der letzten Nachricht"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,__last_update:0
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,write_uid:0
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,write_date:0
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: account_banking_mandate
+#: view:bank.payment.line:account_banking_mandate.bank_payment_line_tree
+#: view:payment.order:account_banking_mandate.view_mandate_payment_order_form
+msgid "Mandate"
+msgstr "Mandat"
+
+#. module: account_banking_mandate
+#: model:mail.message.subtype,name:account_banking_mandate.mandate_cancel
+msgid "Mandate Cancelled"
+msgstr "Mandat abgebrochen"
+
+#. module: account_banking_mandate
+#: model:mail.message.subtype,name:account_banking_mandate.mandate_expired
+msgid "Mandate Expired"
+msgstr "Mandat veraltet"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,format:0
+msgid "Mandate Format"
+msgstr "Mandat Format"
+
+#. module: account_banking_mandate
+#: model:mail.message.subtype,name:account_banking_mandate.mandate_valid
+msgid "Mandate Validated"
+msgstr "Mandat bestätigt"
+
+#. module: account_banking_mandate
+#: code:addons/account_banking_mandate/models/account_banking_mandate.py:147
+#, python-format
+msgid "Mandate should be in cancel state"
+msgstr "Mandat sollte sich im abgebrochenen Zustand befinden"
+
+#. module: account_banking_mandate
+#: code:addons/account_banking_mandate/models/account_banking_mandate.py:135
+#, python-format
+msgid "Mandate should be in draft or valid state"
+msgstr "Mandat sollte sich im Entwurf- oder im Bestätigt-Status befinden "
+
+#. module: account_banking_mandate
+#: code:addons/account_banking_mandate/models/account_banking_mandate.py:126
+#, python-format
+msgid "Mandate should be in draft state"
+msgstr "Mandat sollte sich im Entwurfstatus befinden"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,message_ids:0
+msgid "Messages"
+msgstr "Nachrichten"
+
+#. module: account_banking_mandate
+#: help:account.banking.mandate,message_ids:0
+msgid "Messages and communication history"
+msgstr "Nachrichten und Kommunikation Historie"
+
+#. module: account_banking_mandate
+#: help:account.banking.mandate,state:0
+msgid "Only valid mandates can be used in a payment line. A cancelled mandate is a mandate that has been cancelled by the customer."
+msgstr "Nur gültige Mandate können in der Zahlungsposition verwendet werden. ein abgebrochenes Mandat ist ein Mandat, welches durch den Kunden abgebrochen wurde."
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,partner_id:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: account_banking_mandate
+#: model:ir.model,name:account_banking_mandate.model_payment_line
+msgid "Payment Line"
+msgstr "Zahlungsposition"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_tree
+msgid "Reference"
+msgstr "Referenz"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_search
+msgid "Reference or Partner"
+msgstr "Referenz oder Partner"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_form
+#: field:account.banking.mandate,payment_line_ids:0
+msgid "Related Payment Lines"
+msgstr "Verbundene Zahlungspositionen"
+
+#. module: account_banking_mandate
+#: model:ir.ui.menu,name:account_banking_mandate.mandate_menu
+msgid "SEPA Direct Debit Mandates"
+msgstr "SEPA Direct Debit Mandat"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,scan:0
+msgid "Scan of the Mandate"
+msgstr "Scan von dem Mandat"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_search
+msgid "Search Banking Mandates"
+msgstr "Suche Bank Mandat"
+
+#. module: account_banking_mandate
+#: selection:account.banking.mandate,format:0
+msgid "Sepa Mandate"
+msgstr "Sepa Mandat"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_search
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_tree
+msgid "Signature Date"
+msgstr "unterschriftendatum"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,message_summary:0
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#. module: account_banking_mandate
+#: code:addons/account_banking_mandate/models/account_banking_mandate.py:83
+#, python-format
+msgid "The date of signature of mandate '%s' is in the future !"
+msgstr "Das Unterschriftendatum des Mandats '%s' befindet sich in der Zukunft !"
+
+#. module: account_banking_mandate
+#: code:addons/account_banking_mandate/models/account_banking_mandate.py:89
+#, python-format
+msgid "The mandate '%s' can't have a date of last debit before the date of signature."
+msgstr "Das mandat '%s' kann nicht ein letztes Abbuchungsdatum vor dem Unterschriftendatum haben."
+
+#. module: account_banking_mandate
+#: code:addons/account_banking_mandate/models/payment_line.py:51
+#, python-format
+msgid "The payment line with reference '%s' has the bank account '%s' which is not attached to the mandate '%s' (this mandate is attached to the bank account '%s')."
+msgstr "Die zahlungsposition mit Bezug '%s' hat das Bankkonto '%s', welches aber nicht zu dem Mandat '%s' zugeordnet ist (dieses Mandat ist zu dem Bankkonto '%s' zugeordnet)."
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,unique_mandate_reference:0
+msgid "Unique Mandate Reference"
+msgstr "Gültiger Mandatsbezug"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,message_unread:0
+msgid "Unread Messages"
+msgstr "ungelesene Nachrichten"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_search
+msgid "Valid"
+msgstr "Gültig"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_form
+msgid "Validate"
+msgstr "Bestätigen"
+
+#. module: account_banking_mandate
+#: field:account.banking.mandate,website_message_ids:0
+msgid "Website Messages"
+msgstr "Website Nachrichten"
+
+#. module: account_banking_mandate
+#: help:account.banking.mandate,website_message_ids:0
+msgid "Website communication history"
+msgstr "Website Kommunikaton Historie"
+
+#. module: account_banking_mandate
+#: view:account.banking.mandate:account_banking_mandate.view_mandate_form
+msgid "You should set a mandate back to draft only if you cancelled it by mistake. Do you want to continue?"
+msgstr "Sie sollten nur dann ein Mandat zurück zum Entwurf setzen, wenn Sie einen Fehler rückgängig machen wollen. Wollen Sie fortfahren?"
+
