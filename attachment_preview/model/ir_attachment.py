@@ -74,10 +74,17 @@ class IrAttachment(Model):
                     _logger.debug('Magic determined mimetype %s from file %s',
                                   mimetype, this.store_fname)
                 else:
-                    mimetype = ms.buffer(
-                        base64.b64decode(this[binary_field]))
-                    _logger.debug('Magic determined mimetype %s from buffer',
-                                  mimetype)
+                    #Added by Equitania 21.12.16, when a binary field no longer exists
+                    if this[binary_field] == None:
+                        mimetype = 'text/plain'
+                        pass
+                    else:
+                    ######################
+                        mimetype = ms.buffer(
+                            base64.b64decode(this[binary_field]))
+                        _logger.debug('Magic determined mimetype %s from buffer',
+                                      mimetype)
+
             except ImportError:
                 (mimetype, encoding) = mimetypes.guess_type(
                     'data:;base64,' + this[binary_field], strict=False)
