@@ -52,7 +52,7 @@ if ( !window.CKEDITOR ) {
 			 *
 			 *		alert( CKEDITOR.version ); // e.g. 'CKEditor 3.4.1'
 			 */
-			version: '%VERSION%',
+			version: '4.6.1',
 
 			/**
 			 * Contains the CKEditor revision number.
@@ -61,7 +61,7 @@ if ( !window.CKEDITOR ) {
 			 *
 			 *		alert( CKEDITOR.revision ); // e.g. '3975'
 			 */
-			revision: '%REV%',
+			revision: '580bcaf',
 
 			/**
 			 * A 3-digit random integer, valid for the entire life of the CKEDITOR object.
