@@ -71,8 +71,14 @@ class sale_order(models.Model):
     @api.returns('self', lambda value: value.id)
     @api.multi
     def copy(self, defaults=None):
-         unrevsioned_name = self.name
-         self.write({'unrevisioned_name': unrevsioned_name,})
+         #Anpassung Equitania: unrevsioned_name wird nicht mehr auf den bisherigen Namen gesetzt, damit neue Revisionsnr nicht immer angehängt wird
+         #Ausnahme nur falls unrevsioned_name leer sein sollte
+         #unrevsioned_name = self.name
+         #self.write({'unrevisioned_name': unrevsioned_name,})
+
+         if not self.unrevisioned_name:
+             self.write({'unrevisioned_name': self.name, })
+         #Ende Anpassung Equitania
          
          if not defaults:
              defaults = {}
