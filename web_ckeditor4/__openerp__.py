@@ -22,7 +22,7 @@
 
 {
     'name': 'CKEditor 4.x widget',
-    'version': '8.0.4.6.1',
+    'version': '4.6.1.1',
     'author': "Equitania, Therp BV,Odoo Community Association (OCA)",
     'website': 'https://github.com/OCA/web',
     'summary': 'Provides a widget for editing HTML fields using CKEditor 4.x',
