@@ -5,14 +5,14 @@
 {
     "name": "Dashboard Tile",
     "summary": "Add Tiles to Dashboard",
-    "version": "8.0.1.1.1",
+    "version": "8.0.1.1.2",
     "depends": [
         'web',
         'board',
         'mail',
         'web_widget_color',
     ],
-    'author': 'initOS GmbH & Co. KG, '
+    'author': 'Equitania, initOS GmbH & Co. KG, '
               'GRAP, '
               'Odoo Community Association (OCA)',
     "category": "web",

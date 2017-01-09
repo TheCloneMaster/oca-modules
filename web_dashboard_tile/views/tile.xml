@@ -110,9 +110,9 @@
             <field name="name">Dashboard</field>
             <field name="res_model">tile.tile</field>
             <field name="view_type">form</field>
-            <field name="view_mode">kanban</field>
+            <field name="view_mode">kanban,tree,form</field>                    <!-- EQ: Erweiterung um alle 3 Ansichten -->
             <field name="domain">['|',('user_id','=',False),('user_id','=',uid)]</field>
-            <field name="view_id" ref="dashboard_tile_tile_tree_view"/>
+            <field name="view_id" ref="dashboard_tile_tile_kanban_view"/>       <!-- EQ: Defaultview auf Kannban setzen -->
         </record>
 
         <record id="mail_dashboard" model="ir.ui.menu">
