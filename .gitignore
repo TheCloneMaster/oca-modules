@@ -19,8 +19,7 @@ openerp/filestore
 openerp/addons/base/maintenance
 
 # PyCharm
-.idea/*
-.idea
+.idea/
 
 # generated for windows installer?
 install/win32/*.bat
