@@ -18,6 +18,9 @@ openerp/filestore
 # maintenance migration scripts
 openerp/addons/base/maintenance
 
+# PyCharm
+.idea/
+
 # generated for windows installer?
 install/win32/*.bat
 install/win32/meta.py
