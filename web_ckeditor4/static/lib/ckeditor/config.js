@@ -7,7 +7,9 @@ CKEDITOR.editorConfig = function( config ) {
 	
 	// %REMOVE_START%
 	// The configuration options below are needed when running CKEditor from source files.
-	config.plugins = 'dialogui,dialog,about,basicstyles,clipboard,button,toolbar,enterkey,entities,floatingspace,wysiwygarea,indent,indentlist,fakeobjects,link,list,undo,popup,filebrowser,panel,floatpanel,menu,menubutton,autocorrect,listblock,richcombo,font,removeformat,scayt,image,imageuploader,imagepaste,imageresize,imagerotate,lineutils,widgetselection,widget,image2,imageresponsive';
+	//config.plugins = 'dialogui,dialog,about,basicstyles,clipboard,button,toolbar,enterkey,entities,floatingspace,wysiwygarea,indent,indentlist,fakeobjects,link,list,undo,popup,filebrowser,panel,floatpanel,menu,menubutton,autocorrect,listblock,richcombo,font,removeformat,scayt,image,imageuploader,imagepaste,imageresize,imagerotate,lineutils,widgetselection,widget,image2,imageresponsive';
+	// Anpassung der Config JE EQUITANIA
+	config.plugins = 'dialogui,dialog,about,basicstyles,clipboard,button,toolbar,enterkey,entities,floatingspace,wysiwygarea,indent,indentlist,fakeobjects,link,list,undo,popup,filebrowser,panel,floatpanel,menu,menubutton,autocorrect,listblock,richcombo,font,removeformat,scayt,lineutils,widgetselection,widget';
 	//config.plugins = 'dialogui,dialog,about,basicstyles,clipboard,button,toolbar,enterkey,entities,floatingspace,wysiwygarea,indent,indentlist,fakeobjects,link,list,undo,popup,filebrowser,panel,floatpanel,menu,menubutton,autocorrect,listblock,richcombo,font,removeformat,image,imageuploader,imagepaste,imageresize,imagerotate,lineutils,widgetselection,widget,image2,imageresponsive';
 	config.skin = 'flat';
 	// %REMOVE_END%
