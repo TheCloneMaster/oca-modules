@@ -71,6 +71,7 @@ class sale_order(models.Model):
     @api.returns('self', lambda value: value.id)
     @api.multi
     def copy(self, defaults=None):
+
          #Anpassung Equitania: unrevsioned_name wird nicht mehr auf den bisherigen Namen gesetzt, damit neue Revisionsnr nicht immer angehängt wird
          #Ausnahme nur falls unrevsioned_name leer sein sollte
          #unrevsioned_name = self.name
@@ -79,7 +80,7 @@ class sale_order(models.Model):
          if not self.unrevisioned_name:
              self.write({'unrevisioned_name': self.name, })
          #Ende Anpassung Equitania
-         
+
          if not defaults:
              defaults = {}
          if self.env.context.get('new_sale_revision'):
@@ -95,8 +96,18 @@ class sale_order(models.Model):
                               'state': 'cancel',
                               'current_revision_id': self.id,
                               })
-         return super(sale_order, self).copy(defaults)
- 
+
+
+         # Anpassung Equitania: falls neu erzeugter Datensatz revision_numer = 0 -> revision_name auf name setzen,
+         # damit beim Duplizieren nicht der alte revision_name übernommen wird
+         new_rec = super(sale_order, self).copy(defaults)
+         if new_rec:
+             if new_rec.revision_number == 0:
+                 new_rec.unrevisioned_name = new_rec.name
+         # Ende Anpassung Equitania
+
+         return new_rec
+
     @api.model
     def create(self, values):
         if 'unrevisioned_name' not in values:
@@ -105,4 +116,4 @@ class sale_order(models.Model):
                 values['name'] = seq.next_by_code('sale.order') or '/'
             values['unrevisioned_name'] = values['name']
         return super(sale_order, self).create(values)
-    
+
