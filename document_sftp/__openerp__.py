@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "SFTP",
-    "version": "8.0.1.0.1",
+    "version": "8.0.1.0.2",
     "author": "Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Knowledge Management",
@@ -15,7 +15,7 @@
         "demo/res_users.xml",
     ],
     "data": [
-        #"demo/res_users.xml",
+        "demo/res_users.xml",
         "views/res_users.xml",
         "data/ir_config_parameter.xml",
     ],
