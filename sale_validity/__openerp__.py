@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 #
-#    Author: Guewen Baconnier
+#    Author: Jacques-Etienne Baudoux
 #    Copyright 2013 Camptocamp SA
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -19,32 +19,28 @@
 #
 #
 
-{'name': 'Sale Cancel Reason',
- 'version': '8.0.1.1.0',
- 'author': "Camptocamp,Odoo Community Association (OCA)",
- 'category': 'Sale',
- 'license': 'AGPL-3',
- 'complexity': 'normal',
- 'images': [],
- 'website': "http://www.camptocamp.com",
- 'description': """
-Sale Cancel Reason
-==================
+{"name": "Sales Quotation Validity Date",
+ "version": "8.0.7.0.0",
+ "depends": ["sale"],
+ "author": "Camptocamp,Odoo Community Association (OCA)",
+ "category": "Sales",
+ "website": "http://www.camptocamp.com",
+ "description": """
+Sale order validity date
+========================
 
-When a sale order is canceled, a reason must be given,
-it is chosen from a configured list.
+Add a validity date on the sales quotation defining
+until when the quotation is valid.
+
+A default validity duration (in days) can be configured on the company.
 
 """,
- 'depends': ['sale',
-             ],
- 'demo': [],
- 'data': ['wizard/cancel_reason_view.xml',
-          'view/sale_view.xml',
-          'security/ir.model.access.csv',
-          'data/sale_order_cancel_reason.xml',
-          ],
- 'auto_install': False,
- 'test': ['test/sale_order_cancel.yml',
-          ],
+ 'data': [
+     "view/sale_order.xml",
+     "view/company_view.xml",
+ ],
+ 'test': [
+     'test/sale_validity.yml',
+ ],
  'installable': True,
  }
