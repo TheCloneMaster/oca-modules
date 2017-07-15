@@ -11,15 +11,12 @@ _build/
 *~
 # hg stuff
 *.orig
-*.pyc
 status
+*.pyc
 # odoo filestore
 openerp/filestore
 # maintenance migration scripts
 openerp/addons/base/maintenance
-
-# PyCharm
-.idea/
 
 # generated for windows installer?
 install/win32/*.bat
@@ -35,7 +32,21 @@ install/win32/meta.py
 /share/
 /src/
 /.settings/
+/local/
+/mx/
+pip-selfcheck.json
 
 # PyCharm
-/.idea/*
-/.idea
+.idea/
+.idea
+
+# Eclipse
+.project
+.pydevproject
+.settings/
+
+# odoo
+.mailmap
+
+# mac
+.DS_Store
