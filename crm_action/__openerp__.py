@@ -22,7 +22,7 @@
 
 {
     'name': 'CRM Action',
-    'version': '8.0.1.1.0',
+    'version': '8.0.1.1.170908',
     'author': 'Savoir-faire Linux,Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'category': 'Others',
