@@ -30,10 +30,10 @@ class AccountBankingMandate(models.Model):
     }
 
     def _get_states(self):
-        return [('draft', 'Entwurf'),
-                ('valid', 'Gültig'),
-                ('expired', 'Veraltet'),
-                ('cancel', 'Abgebrochen')]
+        return [('draft', 'Draft'),
+                ('valid', 'Valid'),
+                ('expired', 'Expired'),
+                ('cancel', 'Cancelled')]
 
     format = fields.Selection(
         [('basic', _('Basic Mandate'))],
